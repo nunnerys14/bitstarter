@@ -23,6 +23,8 @@ var assertFileExists = function(infile) {
     if(!fs.existsSync(instr)) {
 	console.log("%s does not exist. Exiting.", instr);
 	process.exit(1);
+    }
+    return instr;	
 };
 
 var cheerioHtmlFile = function(htmlfile) {
@@ -60,3 +62,5 @@ if(require.main == module) {
     console.log(outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
+
+}
